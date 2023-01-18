@@ -13,6 +13,7 @@
 	<version>0.0.1</version>
 	<name>xuecheng-plus-base</name>
 	<description>xuecheng-plus-base</description>
+
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
