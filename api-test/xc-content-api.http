@@ -1,0 +1,12 @@
+# xuecheng-plus
+### 课程查询接口
+POST http://{{content_host}}/content/course/list?pageNo=1&pageSize=2
+Content-Type: application/json
+
+{
+  "auditStatus": "202004",
+  "courseName": "",
+  "publishStatus": ""
+}
+
+### 新增课程接口
