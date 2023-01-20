@@ -33,6 +33,7 @@
         <okhttp.version>4.9.3</okhttp.version>
         <swagger-spring-boot-starter.version>1.9.0.RELEASE</swagger-spring-boot-starter.version>
         <elasticsearch.version>7.12.1</elasticsearch.version>
+        <xuecheng.version>0.0.1</xuecheng.version>
     </properties>
 
     <dependencyManagement>

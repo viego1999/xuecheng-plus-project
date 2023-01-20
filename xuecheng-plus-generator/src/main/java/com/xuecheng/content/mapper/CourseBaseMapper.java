@@ -11,7 +11,6 @@ import org.springframework.stereotype.Repository;
  *
  * @author itcast
  */
-@Repository
 public interface CourseBaseMapper extends BaseMapper<CourseBase> {
 
 }

@@ -4,6 +4,7 @@ import com.xuecheng.base.model.PageParams;
 import com.xuecheng.content.mapper.CourseBaseMapper;
 import com.xuecheng.content.model.dto.QueryCourseParamsDto;
 import com.xuecheng.content.service.CourseBaseInfoService;
+import com.xuecheng.content.service.CourseCategoryService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,9 +14,10 @@ class ContentServiceApplicationTests {
 
 	@Autowired
 	private CourseBaseMapper courseBaseMapper;
-
 	@Autowired
 	private CourseBaseInfoService courseBaseInfoService;
+	@Autowired
+	private CourseCategoryService courseCategoryService;
 
 	@Test
 	void testCourseBaseMapper() {
@@ -25,6 +27,11 @@ class ContentServiceApplicationTests {
 	@Test
 	void testCourseBaseInfoService() {
 		System.out.println(courseBaseInfoService.queryCourseBaseList(new PageParams(), new QueryCourseParamsDto()));
+	}
+
+	@Test
+	void testCourseCategoryService() {
+		System.out.println(courseCategoryService.queryTreeNodes("1"));
 	}
 
 }

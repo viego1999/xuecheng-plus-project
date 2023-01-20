@@ -13,18 +13,23 @@
     <name>xuecheng-plus-content-api</name>
     <description>xuecheng-plus-content-api</description>
     <properties>
-        <java.version>17</java.version>
+        <java.version>8</java.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>com.xuecheng</groupId>
             <artifactId>xuecheng-plus-content-model</artifactId>
-            <version>0.0.1</version>
+            <version>${xuecheng.version}</version>
         </dependency>
         <dependency>
             <groupId>com.xuecheng</groupId>
             <artifactId>xuecheng-plus-content-service</artifactId>
-            <version>0.0.1</version>
+            <version>${xuecheng.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.xuecheng</groupId>
+            <artifactId>xuecheng-plus-base</artifactId>
+            <version>${xuecheng.version}</version>
         </dependency>
         <!--cloud的基础环境包-->
         <dependency>
@@ -60,7 +65,7 @@
         <dependency>
             <groupId>com.spring4all</groupId>
             <artifactId>swagger-spring-boot-starter</artifactId>
-            <version>1.9.0.RELEASE</version>
+            <version>${swagger-spring-boot-starter.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

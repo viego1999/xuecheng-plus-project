@@ -57,5 +57,4 @@ public class CourseMarket implements Serializable {
      */
     private Integer validDays;
 
-
 }
