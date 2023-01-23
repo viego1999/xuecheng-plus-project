@@ -1,0 +1,9 @@
+### 上传文件
+POST {{media_host}}/media/upload/coursefile
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="filedata"; filename="R[0GLDZ2AXY(1AM[MLQ1~8A.png"
+Content-Type: application/octet-stream
+
+< C:/Users/Wuxy/Desktop/wxy/asset/R[0GLDZ2AXY(1AM[MLQ1~8A.png

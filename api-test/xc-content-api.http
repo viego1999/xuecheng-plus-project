@@ -1,6 +1,6 @@
 # xuecheng-plus
 ### 课程查询接口
-POST {{content_host}}/content/course/list?pageNo=1&pageSize=2
+POST {{gateway_host}}/content/course/list?pageNo=1&pageSize=2
 Content-Type: application/json
 
 {
