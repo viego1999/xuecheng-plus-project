@@ -2,6 +2,7 @@ package com.xuecheng.content.service;
 
 import com.xuecheng.base.model.PageParams;
 import com.xuecheng.base.model.PageResult;
+import com.xuecheng.base.model.RestResponse;
 import com.xuecheng.content.model.dto.AddCourseDto;
 import com.xuecheng.content.model.dto.CourseBaseInfoDto;
 import com.xuecheng.content.model.dto.EditCourseDto;
@@ -52,5 +53,13 @@ public interface CourseBaseInfoService {
      * @return 返回修改后的课程信息
      */
     CourseBaseInfoDto updateCourseBase(Long companyId, EditCourseDto dto);
+
+    /**
+     * 删除课程
+     *
+     * @param courseId 课程 id
+     * @return 删除结果
+     */
+    RestResponse<Boolean> deleteCourseBase(Long courseId);
 
 }

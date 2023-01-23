@@ -3,6 +3,7 @@ package com.xuecheng.content.api;
 import com.xuecheng.base.exception.ValidationGroups;
 import com.xuecheng.base.model.PageParams;
 import com.xuecheng.base.model.PageResult;
+import com.xuecheng.base.model.RestResponse;
 import com.xuecheng.content.model.dto.AddCourseDto;
 import com.xuecheng.content.model.dto.CourseBaseInfoDto;
 import com.xuecheng.content.model.dto.EditCourseDto;
@@ -60,6 +61,13 @@ public class CourseBaseInfoController {
     public CourseBaseInfoDto modifyCourseBase(@RequestBody EditCourseDto dto) {
         Long companyId = 1232141425L;
         return courseBaseInfoService.updateCourseBase(companyId, dto);
+    }
+
+    @ApiOperation("删除课程")
+    @DeleteMapping("/{courseId}")
+    public RestResponse<Boolean> deleteCourseBase(@PathVariable Long courseId) {
+
+        return courseBaseInfoService.deleteCourseBase(courseId);
     }
 
 }

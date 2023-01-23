@@ -96,6 +96,6 @@ public interface MediaFileService {
      * @author Mr.M
      * @since 2022/9/13 15:56
      */
-    RestResponse<Boolean> mergechunks(Long companyId, String fileMd5, int chunkTotal, UploadFileParamsDto uploadFileParamsDto);
+    RestResponse<Boolean> mergeChunks(Long companyId, String fileMd5, int chunkTotal, UploadFileParamsDto uploadFileParamsDto);
 
 }

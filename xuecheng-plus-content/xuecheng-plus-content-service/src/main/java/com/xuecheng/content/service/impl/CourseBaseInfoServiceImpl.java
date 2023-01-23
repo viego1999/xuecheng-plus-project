@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.xuecheng.base.exception.XueChengPlusException;
 import com.xuecheng.base.model.PageParams;
 import com.xuecheng.base.model.PageResult;
+import com.xuecheng.base.model.RestResponse;
 import com.xuecheng.content.mapper.CourseBaseMapper;
 import com.xuecheng.content.mapper.CourseCategoryMapper;
 import com.xuecheng.content.mapper.CourseMarketMapper;
@@ -171,6 +172,15 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
         System.out.println("更新营销表影响条数：" + update);
         // 查询课程信息并返回
         return getCourseBaseInfo(courseId);
+    }
+
+    @Override
+    public RestResponse<Boolean> deleteCourseBase(Long courseId) {
+        int delete = courseBaseMapper.deleteById(courseId);
+        if (delete > 0) {
+            return RestResponse.success(true);
+        }
+        return RestResponse.success(false);
     }
 
     /**
