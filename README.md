@@ -9,9 +9,11 @@
 
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  创建数据，导入数据库文件；
+2.  开启 vue 项目：`npm run serve`;
+3.  开启 nacos ：`.\startup.cmd -m standalone`;
+4.  开启 minio：`.\minio.exe server D:\lessons\Xuecheng\minio_data\data1 D:\lessons\Xuecheng\minio_data\data2 D:\lessons\Xuecheng\minio_data\data3 D:\lessons\Xuecheng\minio_data\data4`;
+5.  ......
 
 #### 使用说明
 

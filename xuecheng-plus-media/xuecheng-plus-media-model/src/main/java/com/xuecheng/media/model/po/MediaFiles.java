@@ -56,7 +56,7 @@ public class MediaFiles implements Serializable {
     private String bucket;
 
     /**
-     * 存储路径
+     * 存储路径 <=> objectName(minio)
      */
     private String filePath;
 
@@ -88,7 +88,7 @@ public class MediaFiles implements Serializable {
     private LocalDateTime changeDate;
 
     /**
-     * 状态,1:未处理，视频处理完成更新为2
+     * 状态,1:正常，0:不展示
      */
     private String status;
 

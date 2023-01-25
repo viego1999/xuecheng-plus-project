@@ -108,7 +108,7 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
         courseBase.setAuditStatus("202002");
         // 发布状态默认为未发布
         courseBase.setStatus("203001");
-        // 像课程基本表插入一条数据
+        // 向课程基本表插入一条数据
         int insert1 = courseBaseMapper.insert(courseBase);
         // 获取课程id
         Long courseId = courseBase.getId();

@@ -8,6 +8,8 @@ import com.xuecheng.media.model.dto.UploadFileParamsDto;
 import com.xuecheng.media.model.dto.UploadFileResultDto;
 import com.xuecheng.media.model.po.MediaFiles;
 
+import java.io.File;
+
 /**
  * 媒资文件管理业务类
  *
@@ -50,7 +52,16 @@ public interface MediaFileService {
      * @param objectName 对象名称
      * @return 上传结果
      */
-    UploadFileResultDto addMediaFilesToDb(Long companyId, String fileId, UploadFileParamsDto params, String bucket, String objectName);
+    MediaFiles addMediaFilesToDb(Long companyId, String fileId, UploadFileParamsDto params, String bucket, String objectName);
+
+    /**
+     * 根据绝对路径将文件上传到 minio
+     *
+     * @param filepath   文件绝对路径
+     * @param bucket     桶
+     * @param objectName 对象名
+     */
+    void addMediaFilesToMinio(String filepath, String bucket, String objectName);
 
     /**
      * 检查文件是否存在
@@ -97,5 +108,25 @@ public interface MediaFileService {
      * @since 2022/9/13 15:56
      */
     RestResponse<Boolean> mergeChunks(Long companyId, String fileMd5, int chunkTotal, UploadFileParamsDto uploadFileParamsDto);
+
+    /**
+     * 根据桶和文件路径从 minio 下载文件
+     *
+     * @param file       文件
+     * @param bucket     桶
+     * @param objectName 对象名
+     * @return 文件
+     */
+    File downloadFileFromMinio(File file, String bucket, String objectName);
+
+    /**
+     * 根据 id 查询文件信息
+     *
+     * @param id 文件 id
+     * @return {@link com.xuecheng.media.model.po.MediaFiles} 文件信息
+     * @author Mr.M
+     * @since 2022/9/13 17:47
+     */
+    MediaFiles getFileById(String id);
 
 }

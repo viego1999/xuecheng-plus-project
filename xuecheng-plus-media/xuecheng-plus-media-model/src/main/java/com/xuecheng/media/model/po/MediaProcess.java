@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author itcast
@@ -38,9 +38,14 @@ public class MediaProcess implements Serializable {
     private String bucket;
 
     /**
-     * 状态,1:未处理，视频处理完成更新为2
+     * 处理状态字段，1：未处理，2：处理完成更，3：处理失败
      */
     private String status;
+
+    /**
+     * 文件路径 <=> objectName(minio)
+     */
+    private String filePath;
 
     /**
      * 上传时间
@@ -58,5 +63,8 @@ public class MediaProcess implements Serializable {
      */
     private String url;
 
-
+    /**
+     * 失败原因
+     */
+    private String errormsg;
 }

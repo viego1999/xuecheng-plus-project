@@ -9,10 +9,12 @@ import com.xuecheng.base.model.PageParams;
 import com.xuecheng.base.model.PageResult;
 import com.xuecheng.base.model.RestResponse;
 import com.xuecheng.media.mapper.MediaFilesMapper;
+import com.xuecheng.media.mapper.MediaProcessMapper;
 import com.xuecheng.media.model.dto.QueryMediaParamsDto;
 import com.xuecheng.media.model.dto.UploadFileParamsDto;
 import com.xuecheng.media.model.dto.UploadFileResultDto;
 import com.xuecheng.media.model.po.MediaFiles;
+import com.xuecheng.media.model.po.MediaProcess;
 import com.xuecheng.media.service.MediaFileService;
 import io.minio.GetObjectArgs;
 import io.minio.MinioClient;
@@ -50,6 +52,9 @@ public class MediaFileServiceImpl implements MediaFileService {
 
     @Resource
     private MediaFilesMapper mediaFilesMapper;
+
+    @Resource
+    private MediaProcessMapper mediaProcessMapper;
 
     @Autowired
     private MinioClient minioClient;
@@ -115,7 +120,10 @@ public class MediaFileServiceImpl implements MediaFileService {
         objectName = folder + objectName;
         try {
             addMediaFilesToMinio(bytes, bucketFiles, objectName);
-            return currentProxy.addMediaFilesToDb(companyId, fileId, params, bucketFiles, objectName);
+            MediaFiles mediaFiles = currentProxy.addMediaFilesToDb(companyId, fileId, params, bucketFiles, objectName);
+            UploadFileResultDto resultDto = new UploadFileResultDto();
+            BeanUtils.copyProperties(mediaFiles, resultDto);
+            return resultDto;
         } catch (Exception e) {
             log.error("文件上传失败", e);
             throw new XueChengPlusException("上传过程中出错");
@@ -123,10 +131,18 @@ public class MediaFileServiceImpl implements MediaFileService {
     }
 
     @Transactional
-    public UploadFileResultDto addMediaFilesToDb(Long companyId, String fileId, UploadFileParamsDto params, String bucket, String objectName) {
+    @Override
+    public MediaFiles addMediaFilesToDb(Long companyId, String fileId, UploadFileParamsDto params, String bucket, String objectName) {
+        // 根据文件名称取出媒体类型
+        // 扩展名
+        String extension = null;
+        if (objectName.contains(".")) {
+            extension = objectName.substring(objectName.lastIndexOf("."));
+        }
+        // 获取扩展名对应的媒体类型
+        String contentType = getMimeTypeByExtension(extension);
         // 从数据库查询文件
         MediaFiles mediaFiles = mediaFilesMapper.selectById(fileId);
-        UploadFileResultDto resultDto = null;
         if (mediaFiles == null) {
             mediaFiles = new MediaFiles();
             // 拷贝基本信息
@@ -134,20 +150,34 @@ public class MediaFileServiceImpl implements MediaFileService {
             mediaFiles.setId(fileId);
             mediaFiles.setFileId(fileId);
             mediaFiles.setCompanyId(companyId);
-            mediaFiles.setUrl("/" + bucket + "/" + objectName);
+            mediaFiles.setFilePath(objectName);
+            // 图片、mp4视频可以直接设置url
+            if (contentType.contains("image") || contentType.contains("mp4")) {
+                mediaFiles.setUrl("/" + bucket + "/" + objectName);
+            }
             mediaFiles.setBucket(bucket);
             mediaFiles.setCreateDate(LocalDateTime.now());
             mediaFiles.setAuditStatus("002003");
-            mediaFiles.setStatus("1");
+            mediaFiles.setStatus("1"); // 初始状态正常显示
             // 上传到数据库
             int insert = mediaFilesMapper.insert(mediaFiles);
             if (insert <= 0) {
                 XueChengPlusException.cast("文件信息保存失败");
             }
-            resultDto = new UploadFileResultDto();
-            BeanUtils.copyProperties(mediaFiles, resultDto);
+            // 对 avi 视频添加到待处理任务表
+            if (contentType.equals("video/x-msvideo")) {
+                // 创建一个视频待处理任务
+                MediaProcess mediaProcess = new MediaProcess();
+                BeanUtils.copyProperties(mediaFiles, mediaProcess);
+                // 设置一个状态
+                mediaProcess.setStatus("1"); // 设置处理状态为未处理
+                int count = mediaProcessMapper.insert(mediaProcess);
+                if (count <= 0) {
+                    XueChengPlusException.cast("视频待处理任务添加失败");
+                }
+            }
         }
-        return resultDto;
+        return mediaFiles;
     }
 
     @Override
@@ -274,7 +304,7 @@ public class MediaFileServiceImpl implements MediaFileService {
                 XueChengPlusException.cast("合并文件时上传文件出错");
             }
             // 上传到数据库
-            UploadFileResultDto mediaFiles = currentProxy.addMediaFilesToDb(companyId, fileMd5, uploadFileParamsDto, bucketVideoFiles, mergeFilepath);
+            MediaFiles mediaFiles = currentProxy.addMediaFilesToDb(companyId, fileMd5, uploadFileParamsDto, bucketVideoFiles, mergeFilepath);
             if (mediaFiles == null) {
                 XueChengPlusException.cast("媒资文件入库出错");
             }
@@ -295,6 +325,19 @@ public class MediaFileServiceImpl implements MediaFileService {
         }
     }
 
+    @Override
+    public MediaFiles getFileById(String id) {
+        MediaFiles mediaFiles = mediaFilesMapper.selectById(id);
+        if (mediaFiles == null) {
+            XueChengPlusException.cast("文件不存在");
+        }
+        String url = mediaFiles.getUrl();
+        if (StringUtils.isEmpty(url)) {
+            XueChengPlusException.cast("文件还没有转码处理，请稍后预览");
+        }
+        return mediaFiles;
+    }
+
     /**
      * 根据文件md5值获取文件绝对路径
      *
@@ -306,13 +349,7 @@ public class MediaFileServiceImpl implements MediaFileService {
         return fileMd5.charAt(0) + "/" + fileMd5.charAt(1) + "/" + fileMd5 + "/" + fileMd5 + fileExt;
     }
 
-    /**
-     * 根据绝对路径将文件上传到 minio
-     *
-     * @param filepath   文件绝对路径
-     * @param bucket     桶
-     * @param objectName 对象名
-     */
+    @Override
     public void addMediaFilesToMinio(String filepath, String bucket, String objectName) {
         // 扩展名
         String extension = null;
@@ -378,14 +415,7 @@ public class MediaFileServiceImpl implements MediaFileService {
         return files;
     }
 
-    /**
-     * 根据桶和文件路径从 minio 下载文件
-     *
-     * @param file       文件
-     * @param bucket     桶
-     * @param objectName 对象名
-     * @return 文件
-     */
+    @Override
     public File downloadFileFromMinio(File file, String bucket, String objectName) {
         try (InputStream inputStream = minioClient.getObject(GetObjectArgs.builder()
                 .bucket(bucket)

@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author itcast
@@ -59,5 +59,14 @@ public class MediaProcessHistory implements Serializable {
      */
     private String url;
 
+    /**
+     * 文件路径
+     */
+    private String filePath;
+
+    /**
+     * 失败原因
+     */
+    private String errormsg;
 
 }
