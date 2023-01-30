@@ -1,7 +1,9 @@
 package com.xuecheng.content.api;
 
+import com.xuecheng.content.model.dto.BindTeachplanMediaDto;
 import com.xuecheng.content.model.dto.SaveTeachplanDto;
 import com.xuecheng.content.model.dto.TeachplanDto;
+import com.xuecheng.content.model.po.TeachplanMedia;
 import com.xuecheng.content.service.TeachplanService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -33,7 +35,6 @@ public class TeachplanController {
     @ApiImplicitParam(value = "courseId", name = "课程id", required = true, dataType = "Long", paramType = "path")
     @GetMapping("/{courseId}/tree-nodes")
     public List<TeachplanDto> getTreeNodes(@PathVariable("courseId") Long courseId) {
-
         return teachplanService.findTeachplanTree(courseId);
     }
 
@@ -43,4 +44,15 @@ public class TeachplanController {
         teachplanService.saveTeachplan(teachplan);
     }
 
+    @ApiOperation("课程计划和媒资信息绑定")
+    @PostMapping("/association/media")
+    public TeachplanMedia associationMedia(@RequestBody BindTeachplanMediaDto bindTeachplanMediaDto) {
+        return teachplanService.associationMedia(bindTeachplanMediaDto);
+    }
+
+    @ApiOperation("解绑课程计划和媒资信息")
+    @DeleteMapping("/association/media/{teachplanId}/{mediaId}")
+    public void dissociationMedia(@PathVariable("teachplanId") Long teachplanId, @PathVariable("mediaId") String mediaId) {
+        teachplanService.deleteTeachplanMedia(teachplanId, mediaId);
+    }
 }

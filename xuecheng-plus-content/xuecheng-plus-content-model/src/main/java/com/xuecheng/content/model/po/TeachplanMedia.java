@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 /**
  * <p>
- * 
+ * 教学计划-媒资表
  * </p>
  *
  * @author itcast

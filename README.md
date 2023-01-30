@@ -13,7 +13,7 @@
 2.  开启 vue 项目：`npm run serve`;
 3.  开启 nacos ：`.\startup.cmd -m standalone`;
 4.  开启 minio：`.\minio.exe server D:\lessons\Xuecheng\minio_data\data1 D:\lessons\Xuecheng\minio_data\data2 D:\lessons\Xuecheng\minio_data\data3 D:\lessons\Xuecheng\minio_data\data4`;
-5.  ......
+5.  开启 xxlJob：执行 `mvn package`命令将 admin 项目打包成 jar 包，再进入到 `cd D:\IdeaProjects\xxl-job-2.3.1\xxl-job-admin\target\`，然后执行`java -jar .\xxl-job-admin-2.3.1.jar `
 
 #### 使用说明
 
