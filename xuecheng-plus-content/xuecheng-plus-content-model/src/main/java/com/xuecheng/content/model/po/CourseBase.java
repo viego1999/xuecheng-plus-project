@@ -2,10 +2,14 @@ package com.xuecheng.content.model.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+
 import java.time.LocalDateTime;
+
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
+
 import java.io.Serializable;
+
 import lombok.Data;
 import com.baomidou.mybatisplus.annotation.TableName;
 
@@ -106,14 +110,16 @@ public class CourseBase implements Serializable {
     private String changePeople;
 
     /**
-     * 审核状态
+     * 审核状态<p>
+     * {"202001":"审核未通过"},{"202002":"未提交"},{"202003":"已提交"},{"202004":"审核通过"}
      */
     private String auditStatus;
 
     /**
-     * 课程发布状态 未发布  已发布 下线
+     * 课程发布状态 未发布  已发布 下线<p>
+     * {"203001":"未发布"},{"203002":"已发布"},{"203003":"下线"}
+     * </p>
      */
     private String status;
-
 
 }

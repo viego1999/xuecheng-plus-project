@@ -45,7 +45,7 @@ public class CourseBaseInfoController {
     public CourseBaseInfoDto createCourseBase(@RequestBody @Validated(ValidationGroups.Insert.class) AddCourseDto addCourseDto) {
 
         // 获取当前用户所属的培训机构 id
-        Long companyId = 22L;
+        Long companyId = 1232141425L;
         // 调用 service
         return courseBaseInfoService.createCourseBase(companyId, addCourseDto);
     }
