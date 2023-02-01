@@ -23,6 +23,9 @@ import org.springframework.web.multipart.MultipartFile;
         fallbackFactory = MediaServiceClient.MediaServiceClientFallbackFactory.class)
 public interface MediaServiceClient {
 
+    /**
+     * 上传文件
+     */
     @RequestMapping(value = "/media/upload/coursefile", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     String uploadFile(@RequestPart("filedata") MultipartFile filedata,
                       @RequestParam(value = "folder", required = false) String folder,

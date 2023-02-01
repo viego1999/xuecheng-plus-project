@@ -42,8 +42,10 @@ public class MultipartSupportConfig {
 
     // 将file转为Multipart
     public static MultipartFile getMultipartFile(File file) {
-        FileItem item = new DiskFileItemFactory().createItem("file", MediaType.MULTIPART_FORM_DATA_VALUE, true, file.getName());
+        FileItem item = new DiskFileItemFactory()
+                .createItem("file", MediaType.MULTIPART_FORM_DATA_VALUE, true, file.getName());
         try (FileInputStream inputStream = new FileInputStream(file);
+
              OutputStream outputStream = item.getOutputStream();) {
             IOUtils.copy(inputStream, outputStream);
         } catch (Exception e) {

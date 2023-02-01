@@ -10,6 +10,8 @@ import com.xuecheng.content.model.dto.EditCourseDto;
 import com.xuecheng.content.model.dto.QueryCourseParamsDto;
 import com.xuecheng.content.model.po.CourseBase;
 import com.xuecheng.content.service.CourseBaseInfoService;
+import com.xuecheng.content.util.SecurityUtil;
+import com.xuecheng.content.util.SecurityUtil.XcUser;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.validation.annotation.Validated;
@@ -53,6 +55,8 @@ public class CourseBaseInfoController {
     @ApiOperation("根据课程id查询课程基础信息")
     @GetMapping("/{courseId}")
     public CourseBaseInfoDto getCourseBaseById(@PathVariable("courseId") Long courseId) {
+        // 取出当前用户身份
+        XcUser user = SecurityUtil.getUser();
         return courseBaseInfoService.queryCourseBaseById(courseId);
     }
 

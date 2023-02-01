@@ -19,6 +19,9 @@ spring:
           - data-id: content-service-${spring.profiles.active}.yaml
             group: xuecheng-plus-project
             refresh: true
+          - data-id: search-${spring.profiles.active}.yaml  # 由于 configuration 需要加载 search 项目的配置文件信息
+            group: xuecheng-plus-project
+            refresh: true
         # 方式三：以共享配置文件 方式引入
         shared-configs:
           - data-id: swagger-${spring.profiles.active}.yaml
