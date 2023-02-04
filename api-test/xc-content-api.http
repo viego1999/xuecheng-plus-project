@@ -97,3 +97,6 @@ Content-Type: application/json
 
 ### 课程发布
 POST {{content_host}}/content/coursepublish/2
+
+### 查询课程发布信息
+GET {{content_host}}/content/r/coursepublish/2

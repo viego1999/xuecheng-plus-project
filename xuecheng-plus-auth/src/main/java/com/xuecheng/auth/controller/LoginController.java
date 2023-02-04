@@ -2,9 +2,11 @@ package com.xuecheng.auth.controller;
 
 import com.xuecheng.ucenter.mapper.XcUserMapper;
 import com.xuecheng.ucenter.model.po.XcUser;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -44,6 +46,13 @@ public class LoginController {
     @PreAuthorize("hasAuthority('p2')") // 拥有 p2 权限方可访问
     public String r2() {
         return "访问r2资源";
+    }
+
+    @ApiOperation("用户注册")
+    @PostMapping("/register")
+    public String register() {
+
+        return "success";
     }
 
 }

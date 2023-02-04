@@ -1,8 +1,10 @@
 package com.xuecheng.ucenter.service.impl;
 
 import com.alibaba.fastjson.JSON;
+import com.xuecheng.ucenter.mapper.XcMenuMapper;
 import com.xuecheng.ucenter.model.dto.AuthParamsDto;
 import com.xuecheng.ucenter.model.dto.XcUserExt;
+import com.xuecheng.ucenter.model.po.XcMenu;
 import com.xuecheng.ucenter.service.AuthService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +14,10 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 自定义 UserDetailsService 用来对接 Spring Security
@@ -26,6 +32,10 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl implements UserDetailsService {
     @Autowired
     private ApplicationContext applicationContext;
+
+    @Resource
+    private XcMenuMapper menuMapper;
+
 
     /**
      * 查询用户信息组成用户身份信息
@@ -61,10 +71,22 @@ public class UserServiceImpl implements UserDetailsService {
      * @return {@link UserDetails}
      */
     public UserDetails getUserDetails(XcUserExt userExt) {
-        String[] authorities = {"p1"};
+        // 查询用户权限
+        List<XcMenu> xcMenus = menuMapper.selectPermissionByUserId(userExt.getId());
+        List<String> permissions = new ArrayList<>();
+        if (xcMenus == null || xcMenus.size() == 0) {
+            permissions.add("p1");
+        } else {
+            xcMenus.forEach(menu -> permissions.add(menu.getCode()));
+        }
+        // 将用户权限放在 XcUserExt 中
+        userExt.setPermissions(permissions);
+        String[] authorities = permissions.toArray(new String[0]);
+
         String password = userExt.getPassword();
         // 为了安全在令牌中不存放密码
         userExt.setPassword(null);
+
         String userJson = JSON.toJSONString(userExt);
         return User.withUsername(userJson).password(password).authorities(authorities).build();
     }

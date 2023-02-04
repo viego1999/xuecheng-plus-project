@@ -1,6 +1,7 @@
 package com.xuecheng.content.service;
 
 import com.xuecheng.content.model.dto.CoursePreviewDto;
+import com.xuecheng.content.model.po.CoursePublish;
 
 import java.io.File;
 
@@ -23,6 +24,16 @@ public interface CoursePublishService {
      * @since 2022/9/16 15:36
      */
     CoursePreviewDto getCoursePreviewInfo(Long courseId);
+
+    /**
+     * 通过 /open 接口获取课程预览信息
+     *
+     * @param courseId 课程 id
+     * @return {@link com.xuecheng.content.model.dto.CoursePreviewDto}
+     * @author Wuxy
+     * @since 2022/9/16 15:36
+     */
+    CoursePreviewDto getOpenCoursePreviewInfo(Long courseId);
 
     /**
      * 提交审核
@@ -70,5 +81,25 @@ public interface CoursePublishService {
      * @return 新增成功返回 true，否则 false
      */
     Boolean saveCourseIndex(Long courseId);
+
+    /**
+     * 根据课程id查询课程发布信息
+     *
+     * @param courseId 课程id
+     * @return 课程发布信息
+     */
+    CoursePublish getCoursePublish(Long courseId);
+
+    /**
+     * 根据课程 id 查询缓存（Redis等）中的课程发布信息
+     * <ol>
+     *     <li>基于缓存空值解决缓存穿透问题</li>
+     *     <li>基于redisson分布式锁解决缓存击穿问题</li>
+     * </ol>
+     *
+     * @param courseId 课程id
+     * @return 课程发布信息
+     */
+    CoursePublish getCoursePublishCache(Long courseId);
 
 }

@@ -69,7 +69,7 @@
         <!--DEBUG   500-->
         <!--TRACE   600-->
         <!--ALL   Integer.MAX_VALUE-->
-        <Root level="DEBUG" includeLocation="true">
+        <Root level="DEBUG" includeLocation="true"> <!-- 压力测试，设置只输出错误日志 -->
             <AppenderRef ref="AsyncAppender"/>
             <AppenderRef ref="Console"/>
             <AppenderRef ref="DebugAppender"/>

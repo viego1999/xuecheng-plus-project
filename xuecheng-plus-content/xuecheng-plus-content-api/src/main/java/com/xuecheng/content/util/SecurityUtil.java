@@ -57,7 +57,7 @@ public class SecurityUtil {
 
         private String wxUnionid;
 
-        private String companyId;
+        private Long companyId;
         /**
          * 头像
          */

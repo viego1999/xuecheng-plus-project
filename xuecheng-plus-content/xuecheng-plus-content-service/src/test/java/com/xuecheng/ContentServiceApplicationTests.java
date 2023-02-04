@@ -28,7 +28,8 @@ class ContentServiceApplicationTests {
 
     @Test
     void testCourseBaseInfoService() {
-        System.out.println(courseBaseInfoService.queryCourseBaseList(new PageParams(), new QueryCourseParamsDto()));
+        Long companyId = 1232141425L;
+        System.out.println(courseBaseInfoService.queryCourseBaseList(companyId, new PageParams(), new QueryCourseParamsDto()));
     }
 
     @Test

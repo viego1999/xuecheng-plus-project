@@ -28,8 +28,12 @@ import freemarker.template.Template;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.redisson.api.RLock;
+import org.redisson.api.RedissonClient;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
@@ -45,6 +49,7 @@ import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author Wuxy
@@ -57,34 +62,69 @@ import java.util.Map;
 public class CoursePublishServiceImpl implements CoursePublishService {
     @Resource
     private CourseBaseMapper courseBaseMapper;
+
     @Resource
     private CourseMarketMapper courseMarketMapper;
+
     @Resource
     private CoursePublishMapper coursePublishMapper;
+
     @Resource
     private CoursePublishPreMapper coursePublishPreMapper;
+
     @Autowired
     private CourseBaseInfoService courseBaseInfoService;
+
     @Autowired
     private TeachplanService teachplanService;
+
     @Autowired
     private MqMessageService mqMessageService;
+
     @Autowired
     private MediaServiceClient mediaServiceClient;
+
     @Autowired
     private SearchServiceClient searchServiceClient;
 
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
+
+    @Autowired
+    private RedissonClient redissonClient;
+
+
     @Override
     public CoursePreviewDto getCoursePreviewInfo(Long courseId) {
+        // 查询课程发布信息
+        CoursePublish coursePublish = getCoursePublishCache(courseId);
+
         // 课程基本信息
-        CourseBaseInfoDto courseBaseInfo = courseBaseInfoService.queryCourseBaseById(courseId);
+        CourseBaseInfoDto courseBaseInfo = new CourseBaseInfoDto();
+        BeanUtils.copyProperties(coursePublish, courseBaseInfo);
+
         // 课程计划信息
-        List<TeachplanDto> teachplanTree = teachplanService.findTeachplanTree(courseId);
+        List<TeachplanDto> teachplans = JSON.parseArray(coursePublish.getTeachplan(), TeachplanDto.class);
 
         // 创建课程预览信息
         CoursePreviewDto coursePreviewDto = new CoursePreviewDto();
         coursePreviewDto.setCourseBase(courseBaseInfo);
-        coursePreviewDto.setTeachplans(teachplanTree);
+        coursePreviewDto.setTeachplans(teachplans);
+
+        return coursePreviewDto;
+    }
+
+    @Override
+    public CoursePreviewDto getOpenCoursePreviewInfo(Long courseId) {
+        // 课程基本信息
+        CourseBaseInfoDto courseBaseInfo = courseBaseInfoService.queryCourseBaseById(courseId);
+        // 课程计划信息
+        List<TeachplanDto> teachplans = teachplanService.findTeachplanTree(courseId);
+
+        // 创建课程预览信息
+        CoursePreviewDto coursePreviewDto = new CoursePreviewDto();
+        coursePreviewDto.setCourseBase(courseBaseInfo);
+        coursePreviewDto.setTeachplans(teachplans);
 
         return coursePreviewDto;
     }
@@ -237,6 +277,48 @@ public class CoursePublishServiceImpl implements CoursePublishService {
             XueChengPlusException.cast("添加课程索引失败");
         }
         return true;
+    }
+
+    @Override
+    public CoursePublish getCoursePublish(Long courseId) {
+        return coursePublishMapper.selectById(courseId);
+    }
+
+    @Override
+    public CoursePublish getCoursePublishCache(Long courseId) {
+        // 查询缓存
+        String key = "course_" + courseId;
+        String jsonStr = stringRedisTemplate.opsForValue().get(key);
+        // 缓存命中
+        if (StringUtils.isNotEmpty(jsonStr)) {
+            if (jsonStr.equals("null")) { // 如果为null字符串，表明数据库中不存在此课程，直接返回（解决缓存穿透）
+                return null;
+            }
+            return JSON.parseObject(jsonStr, CoursePublish.class);
+        }
+        // 缓存未命中，查询数据库并添加到缓存中
+        // 每一门课程设置一个锁
+        RLock lock = redissonClient.getLock("coursequerylock:" + courseId);
+        // 阻塞等待获取锁
+        lock.lock();
+        try {
+            // 检查是否已经存在（双从检查）
+            jsonStr = stringRedisTemplate.opsForValue().get(key);
+            if (StringUtils.isNotEmpty(jsonStr)) {
+                return JSON.parseObject(jsonStr, CoursePublish.class);
+            }
+            // 查询数据库
+            CoursePublish coursePublish = getCoursePublish(courseId);
+            // 当 coursePublish 为空时，缓存 null 字符串
+            stringRedisTemplate.opsForValue().set(key, JSON.toJSONString(coursePublish), 1, TimeUnit.DAYS);
+            return coursePublish;
+        } catch (Exception e) {
+            log.error("查询课程发布信息失败：", e);
+            throw new XueChengPlusException("课程发布信息查询异常：" + e.getMessage());
+        } finally {
+            // 释放锁
+            lock.unlock();
+        }
     }
 
     /**

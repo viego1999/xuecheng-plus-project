@@ -7,7 +7,9 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -22,7 +24,6 @@ import javax.annotation.Resource;
 @Api(value = "验证码服务接口")
 @RestController
 public class CheckCodeController {
-
     @Resource(name = "PicCheckCodeService")
     private CheckCodeService picCheckCodeService;
 
@@ -42,5 +43,11 @@ public class CheckCodeController {
     @PostMapping(value = "/verify")
     public Boolean verify(String key, String code) {
         return picCheckCodeService.verify(key, code);
+    }
+
+    @ApiOperation(value = "生成手机验证码信息", notes = "生成手机验证码信息")
+    @GetMapping("/phone")
+    public String generatePhoneCheckCode(@RequestParam("number") String number) {
+        return "123456";
     }
 }

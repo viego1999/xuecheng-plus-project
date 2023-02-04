@@ -33,6 +33,6 @@ public class CourseOpenController {
     @ApiOperation("获取课程预览信息")
     @GetMapping("/course/whole/{courseId}")
     public CoursePreviewDto getPreviewInfo(@PathVariable("courseId") Long courseId) {
-        return coursePublishService.getCoursePreviewInfo(courseId);
+        return coursePublishService.getOpenCoursePreviewInfo(courseId);
     }
 }

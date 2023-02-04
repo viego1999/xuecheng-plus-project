@@ -29,7 +29,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) {
-        resources.resourceId(RESOURCE_ID)//资源 id
+        resources.resourceId(RESOURCE_ID) // 资源 id
                 .tokenStore(tokenStore).stateless(true);
     }
 

@@ -14,6 +14,7 @@ import com.xuecheng.content.util.SecurityUtil;
 import com.xuecheng.content.util.SecurityUtil.XcUser;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,11 +36,18 @@ public class CourseBaseInfoController {
     @Resource
     private CourseBaseInfoService courseBaseInfoService;
 
+
     @ApiOperation("课程查询接口")
     @PostMapping("/list")
+    @PreAuthorize("hasAuthority('xc_teachmanager_course_list')") // 拥有课程列表查询的授权方可访问（jwt中保存了UserDetails信息）
     public PageResult<CourseBase> list(PageParams pageParams, @RequestBody QueryCourseParamsDto queryCourseParams) {
-        // 调用 service 获取数据
-        return courseBaseInfoService.queryCourseBaseList(pageParams, queryCourseParams);
+        // 取出身份
+        XcUser user = SecurityUtil.getUser();
+        // 得到机构id
+        assert user != null;
+        Long companyId = user.getCompanyId();
+        // 调用 service 获取数据 （实现细粒度授权，本机构只能查询自己机构的课程列表）
+        return courseBaseInfoService.queryCourseBaseList(companyId, pageParams, queryCourseParams);
     }
 
     @ApiOperation("新增课程")

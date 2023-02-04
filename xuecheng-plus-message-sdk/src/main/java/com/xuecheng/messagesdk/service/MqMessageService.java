@@ -30,6 +30,7 @@ public interface MqMessageService extends IService<MqMessage> {
     /**
      * 添加消息
      *
+     * @param messageType  消息类型（例如：支付结果、课程发布等）
      * @param businessKey1 业务id
      * @param businessKey2 业务id
      * @param businessKey3 业务id

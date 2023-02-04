@@ -1,6 +1,7 @@
 package com.xuecheng.content.api;
 
 import com.xuecheng.content.model.dto.CoursePreviewDto;
+import com.xuecheng.content.model.po.CoursePublish;
 import com.xuecheng.content.service.CoursePublishService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +45,13 @@ public class CoursePublishController {
         coursePublishService.commitAudit(companyId, courseId);
     }
 
+    @ApiOperation("查询课程发布信息")
+    @GetMapping("/r/coursepublish/{courseId}")
+    @ResponseBody
+    public CoursePublish getCoursePublish(@PathVariable("courseId") Long courseId) {
+        return coursePublishService.getCoursePublishCache(courseId);
+    }
+
     @ApiOperation("课程发布")
     @ResponseBody
     @PostMapping("/coursepublish/{courseId}")
@@ -51,4 +59,12 @@ public class CoursePublishController {
         Long companyId = 1232141425L;
         coursePublishService.publish(companyId, courseId);
     }
+
+    @ApiOperation("查询课程预览信息")
+    @ResponseBody
+    @GetMapping("/course/whole/{courseId}")
+    public CoursePreviewDto getPreviewInfo(@PathVariable("courseId") Long courseId) {
+        return coursePublishService.getCoursePreviewInfo(courseId);
+    }
+
 }
