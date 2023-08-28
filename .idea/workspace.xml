@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e685ffe1-35d7-4929-a47e-b530c5cb006d" name="Changes" comment="" />
+    <list default="true" id="e685ffe1-35d7-4929-a47e-b530c5cb006d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/xuecheng-plus-orders/xuecheng-plus-orders-api/src/main/java/com/xuecheng/orders/config/ResouceServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xuecheng-plus-auth/src/main/java/com/xuecheng/auth/config/TokenConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/xuecheng-plus-auth/src/main/java/com/xuecheng/auth/config/TokenConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-model/src/main/java/com/xuecheng/content/model/dto/AddCourseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-model/src/main/java/com/xuecheng/content/model/dto/AddCourseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-service/src/main/java/com/xuecheng/content/feignclient/SearchServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-service/src/main/java/com/xuecheng/content/feignclient/SearchServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-service/src/main/java/com/xuecheng/content/service/impl/CoursePublishServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-service/src/main/java/com/xuecheng/content/service/impl/CoursePublishServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-service/src/main/java/com/xuecheng/content/service/jobhandler/CoursePublishTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-service/src/main/java/com/xuecheng/content/service/jobhandler/CoursePublishTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xuecheng-plus-learning/xuecheng-plus-learning-api/src/main/java/com/xuecheng/learning/api/MyCourseTableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xuecheng-plus-learning/xuecheng-plus-learning-api/src/main/java/com/xuecheng/learning/api/MyCourseTableController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xuecheng-plus-learning/xuecheng-plus-learning-service/src/main/java/com/xuecheng/learning/service/impl/MyCourseTableServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xuecheng-plus-learning/xuecheng-plus-learning-service/src/main/java/com/xuecheng/learning/service/impl/MyCourseTableServicesImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xuecheng-plus-learning/xuecheng-plus-learning-service/src/main/java/com/xuecheng/learning/service/impl/ReceivePayNotifyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xuecheng-plus-learning/xuecheng-plus-learning-service/src/main/java/com/xuecheng/learning/service/impl/ReceivePayNotifyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xuecheng-plus-message-sdk/src/main/java/com/xuecheng/messagesdk/model/po/MqMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/xuecheng-plus-message-sdk/src/main/java/com/xuecheng/messagesdk/model/po/MqMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xuecheng-plus-message-sdk/src/main/java/com/xuecheng/messagesdk/service/MessageProcessAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/xuecheng-plus-message-sdk/src/main/java/com/xuecheng/messagesdk/service/MessageProcessAbstract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xuecheng-plus-orders/xuecheng-plus-orders-service/src/main/java/com/xuecheng/orders/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xuecheng-plus-orders/xuecheng-plus-orders-service/src/main/java/com/xuecheng/orders/service/impl/OrderServiceImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,6 +74,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "Merging master",
     "jdk.selected.JAVA_MODULE": "1.8",
     "last_opened_file_path": "D:/IdeaProjects/Sa-Token",
     "node.js.detected.package.eslint": "true",
@@ -354,7 +373,8 @@
       <workItem from="1689299559309" duration="657000" />
       <workItem from="1689342639155" duration="598000" />
       <workItem from="1689731195427" duration="141000" />
-      <workItem from="1693213062191" duration="337000" />
+      <workItem from="1693213062191" duration="644000" />
+      <workItem from="1693213719363" duration="764000" />
     </task>
     <task id="LOCAL-00001" summary="提交父工程、基础工程的基础代码（pom.xml）">
       <created>1674027916487</created>

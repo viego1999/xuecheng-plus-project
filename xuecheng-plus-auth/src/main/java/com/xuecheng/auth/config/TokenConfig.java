@@ -22,6 +22,7 @@ import java.util.Collections;
  **/
 @Configuration
 public class TokenConfig {
+
     /**
      * 生成 JWT 的 Signature 的服务端密钥
      */
