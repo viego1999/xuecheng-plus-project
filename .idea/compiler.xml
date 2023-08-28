@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+      </profile>
+      <profile name="Annotation profile for xuecheng-plus-system" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../../apache-maven-3.6.3/repo/org/projectlombok/lombok/1.18.8/lombok-1.18.8.jar" />
+        </processorPath>
+        <module name="xuecheng-plus-message-sdk" />
+        <module name="xuecheng-plus-checkcode" />
+        <module name="xuecheng-plus-media-api" />
+        <module name="xuecheng-plus-learning-model" />
+        <module name="xuecheng-plus-content-service" />
+        <module name="xuecheng-plus-search" />
+        <module name="xuecheng-plus-orders-model" />
+        <module name="xuecheng-plus-media-service" />
+        <module name="xuecheng-plus-content-model" />
+        <module name="xuecheng-plus-generator" />
+        <module name="xuecheng-plus-media-model" />
+        <module name="xuecheng-plus-base" />
+        <module name="xuecheng-plus-learning-api" />
+        <module name="xuecheng-plus-system-service" />
+        <module name="xuecheng-plus-gateway" />
+        <module name="xuecheng-plus-system-model" />
+        <module name="xuecheng-plus-system-api" />
+        <module name="xuecheng-plus-auth" />
+        <module name="xuecheng-plus-content-api" />
+        <module name="xuecheng-plus-orders-api" />
+        <module name="xuecheng-plus-orders-service" />
+        <module name="xuecheng-plus-learning-service" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="xuecheng-plus-base" options="" />
+      <module name="xuecheng-plus-content" options="" />
+      <module name="xuecheng-plus-content-api" options="" />
+      <module name="xuecheng-plus-content-model" options="" />
+      <module name="xuecheng-plus-content-service" options="" />
+      <module name="xuecheng-plus-generator" options="" />
+      <module name="xuecheng-plus-parent" options="" />
+    </option>
+  </component>
+</project>

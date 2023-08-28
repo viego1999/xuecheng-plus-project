@@ -1,0 +1,28 @@
+# 微服务配置
+spring:
+  application:
+    name: system-api
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      discovery:
+        namespace: ${spring.profiles.active}  # 命名空间id
+        group: xuecheng-plus-project
+      config:
+        namespace: ${spring.profiles.active}
+        group: xuecheng-plus-project
+        file-extension: yaml
+        refresh-enabled: true
+        extension-configs: # 拓展配置文件
+          - data-id: system-service-${spring.profiles.active}.yaml
+            group: xuecheng-plus-project
+            refresh: true
+        shared-configs: # 共享配置文件
+          - data-id: swagger-${spring.profiles.active}.yaml
+            group: xuecheng-plus-common
+            refresh: true
+          - data-id: logging-${spring.profiles.active}.yaml
+            group: xuecheng-plus-common
+            refresh: true
+  profiles:
+    active: dev

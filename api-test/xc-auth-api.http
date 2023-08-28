@@ -1,0 +1,38 @@
+### 授权码模式
+### 第一步申请授权码(浏览器请求)
+GET {{auth_host}}/auth/oauth/authorize?client_id=c1&response_type=code&scope=all&
+    redirect_uri=http://www.xuecheng-plus.com
+
+### 第二步申请令牌
+### 授权码模式
+POST {{auth_host}}/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=authorization_code&code=YetbvQ&
+    redirect_uri=http://www.xuecheng-plus.com
+
+### 密码模式
+POST {{auth_host}}/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&
+    username={"username":"itcast","password":"123","authType":"password"}&
+    password=123
+
+### 校验 jwt 令牌
+POST {{auth_host}}/auth/oauth/check_token?
+    token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ7XCJjZWxscGhvbmVcIjpcIjEyMzQ1XCIsXCJjcmVhdGVUaW1lXCI6XCIyMDIyLTA5LTI4VDA4OjMyOjAzXCIsXCJlbWFpbFwiOlwiXCIsXCJpZFwiOlwiNDlcIixcIm5hbWVcIjpcInRlc3QwMlwiLFwicGVybWlzc2lvbnNcIjpbXCJ4Y190ZWFjaG1hbmFnZXJcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfYWRkXCIsXCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX2RlbFwiLFwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9tYXJrZXRcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfYmFzZVwiLFwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9wbGFuXCIsXCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX3B1Ymxpc2hcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfbGlzdFwiLFwiY291cnNlX2ZpbmRfbGlzdFwiXSxcInNleFwiOlwiMVwiLFwic3RhdHVzXCI6XCIxXCIsXCJ1c2VybmFtZVwiOlwiaXRjYXN0XCIsXCJ1dHlwZVwiOlwiMTAxMDAyXCJ9Iiwic2NvcGUiOlsiYWxsIl0sImV4cCI6MTY3NTM1OTc3NSwiYXV0aG9yaXRpZXMiOlsieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9iYXNlIiwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9kZWwiLCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX2xpc3QiLCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX3BsYW4iLCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlIiwiY291cnNlX2ZpbmRfbGlzdCIsInhjX3RlYWNobWFuYWdlciIsInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfbWFya2V0IiwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9wdWJsaXNoIiwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9hZGQiXSwianRpIjoiMTQxOTc1YTQtNDVhYi00Yzc3LTgwOTMtYmM4YTQ0ZmZlNTdhIiwiY2xpZW50X2lkIjoiWGNXZWJBcHAifQ.H4zCq_ZzCeF-hPrUwtnbgiL7zwdLt2SyTi2KgasczhQ
+
+
+### 测试访问
+GET http://localhost:63040/content/course/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ6aGFuZ3NhbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE2NzUyMzAxNjIsImF1dGhvcml0aWVzIjpbInAxIl0sImp0aSI6ImZmYTZhZDczLTgwZTQtNDYxZS1hMWQyLTlkMTZjOWY1YzE1NCIsImNsaWVudF9pZCI6IlhjV2ViQXBwIn0.5TZ1m0zdLvqy90Nv9w-lDhCYNcGyi25Kmplc8uF2-6k
+
+### 测试通过网关访问
+GET {{gateway_host}}/content/course/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ7XCJjZWxscGhvbmVcIjpcIjEyMzQ1XCIsXCJjcmVhdGVUaW1lXCI6XCIyMDIyLTA5LTI4VDA4OjMyOjAzXCIsXCJlbWFpbFwiOlwiXCIsXCJpZFwiOlwiNDlcIixcIm5hbWVcIjpcInRlc3QwMlwiLFwic2V4XCI6XCIxXCIsXCJzdGF0dXNcIjpcIjFcIixcInVzZXJuYW1lXCI6XCJpdGNhc3RcIixcInV0eXBlXCI6XCIxMDEwMDJcIn0iLCJzY29wZSI6WyJhbGwiXSwiZXhwIjoxNjc1MjQ1MTg1LCJhdXRob3JpdGllcyI6WyJwMSJdLCJqdGkiOiJiNTg1ZGQ5NC1jYjg1LTQ0NTQtYWM3MS1kM2NiMDUyZTYzN2QiLCJjbGllbnRfaWQiOiJYY1dlYkFwcCJ9.EB8fqw99C4G-RJKv69ZoWVuuJBh9oUozB1Bb5RLoZwA
+
+### 测试访问权限链接
+### 课程查询接口
+POST {{gateway_host}}/content/course/list?pageNo=1&pageSize=2
+Content-Type: application/json
+
+{
+  "auditStatus": "202004",
+  "courseName": "",
+  "publishStatus": ""
+}

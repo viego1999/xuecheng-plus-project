@@ -1,0 +1,16 @@
+{
+  "aud": [
+    "xuecheng-plus"
+  ],
+  "user_name": "itcast",
+  "scope": [
+    "all"
+  ],
+  "active": true,
+  "exp": 1675242216,
+  "authorities": [
+    "test"
+  ],
+  "jti": "3f1ce462-7cb0-42ab-9dc3-9a2410da57d2",
+  "client_id": "XcWebApp"
+}

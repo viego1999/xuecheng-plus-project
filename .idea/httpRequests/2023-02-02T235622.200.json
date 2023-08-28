@@ -1,0 +1,16 @@
+{
+  "id": 13,
+  "courseId": 2,
+  "courseName": "测试课程01",
+  "userId": "49",
+  "companyId": 1232141425,
+  "orderType": "700002",
+  "createDate": "2023-02-02 23:53:30",
+  "validDays": 555,
+  "coursePrice": 1.0,
+  "status": "701002",
+  "validtimeStart": "2023-02-02 23:53:30",
+  "validtimeEnd": "2024-08-10 23:53:30",
+  "remarks": null,
+  "learnStatus": "702002"
+}

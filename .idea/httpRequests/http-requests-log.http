@@ -1,0 +1,506 @@
+POST http://localhost:63020/learning/choosecourse/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ7XCJjZWxscGhvbmVcIjpcIjEyMzQ1XCIsXCJjcmVhdGVUaW1lXCI6XCIyMDIyLTA5LTI4VDA4OjMyOjAzXCIsXCJlbWFpbFwiOlwiXCIsXCJpZFwiOlwiNDlcIixcIm5hbWVcIjpcInRlc3QwMlwiLFwicGVybWlzc2lvbnNcIjpbXCJ4Y190ZWFjaG1hbmFnZXJcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfYWRkXCIsXCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX2RlbFwiLFwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9tYXJrZXRcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfYmFzZVwiLFwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9wbGFuXCIsXCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX3B1Ymxpc2hcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfbGlzdFwiLFwiY291cnNlX2ZpbmRfbGlzdFwiXSxcInNleFwiOlwiMVwiLFwic3RhdHVzXCI6XCIxXCIsXCJ1c2VybmFtZVwiOlwiaXRjYXN0XCIsXCJ1dHlwZVwiOlwiMTAxMDAyXCJ9Iiwic2NvcGUiOlsiYWxsIl0sImV4cCI6MTY3NTM1OTc3NSwiYXV0aG9yaXRpZXMiOlsieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9iYXNlIiwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9kZWwiLCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX2xpc3QiLCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX3BsYW4iLCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlIiwiY291cnNlX2ZpbmRfbGlzdCIsInhjX3RlYWNobWFuYWdlciIsInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfbWFya2V0IiwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9wdWJsaXNoIiwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9hZGQiXSwianRpIjoiMTQxOTc1YTQtNDVhYi00Yzc3LTgwOTMtYmM4YTQ0ZmZlNTdhIiwiY2xpZW50X2lkIjoiWGNXZWJBcHAifQ.H4zCq_ZzCeF-hPrUwtnbgiL7zwdLt2SyTi2KgasczhQ
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-02T235636.200.json
+
+###
+
+POST http://localhost:63020/learning/choosecourse/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ7XCJjZWxscGhvbmVcIjpcIjEyMzQ1XCIsXCJjcmVhdGVUaW1lXCI6XCIyMDIyLTA5LTI4VDA4OjMyOjAzXCIsXCJlbWFpbFwiOlwiXCIsXCJpZFwiOlwiNDlcIixcIm5hbWVcIjpcInRlc3QwMlwiLFwicGVybWlzc2lvbnNcIjpbXCJ4Y190ZWFjaG1hbmFnZXJcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfYWRkXCIsXCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX2RlbFwiLFwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9tYXJrZXRcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfYmFzZVwiLFwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9wbGFuXCIsXCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX3B1Ymxpc2hcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfbGlzdFwiLFwiY291cnNlX2ZpbmRfbGlzdFwiXSxcInNleFwiOlwiMVwiLFwic3RhdHVzXCI6XCIxXCIsXCJ1c2VybmFtZVwiOlwiaXRjYXN0XCIsXCJ1dHlwZVwiOlwiMTAxMDAyXCJ9Iiwic2NvcGUiOlsiYWxsIl0sImV4cCI6MTY3NTM1OTc3NSwiYXV0aG9yaXRpZXMiOlsieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9iYXNlIiwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9kZWwiLCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX2xpc3QiLCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX3BsYW4iLCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlIiwiY291cnNlX2ZpbmRfbGlzdCIsInhjX3RlYWNobWFuYWdlciIsInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfbWFya2V0IiwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9wdWJsaXNoIiwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9hZGQiXSwianRpIjoiMTQxOTc1YTQtNDVhYi00Yzc3LTgwOTMtYmM4YTQ0ZmZlNTdhIiwiY2xpZW50X2lkIjoiWGNXZWJBcHAifQ.H4zCq_ZzCeF-hPrUwtnbgiL7zwdLt2SyTi2KgasczhQ
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-02T235622.200.json
+
+###
+
+POST http://localhost:63020/learning/choosecourse/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ7XCJjZWxscGhvbmVcIjpcIjEyMzQ1XCIsXCJjcmVhdGVUaW1lXCI6XCIyMDIyLTA5LTI4VDA4OjMyOjAzXCIsXCJlbWFpbFwiOlwiXCIsXCJpZFwiOlwiNDlcIixcIm5hbWVcIjpcInRlc3QwMlwiLFwicGVybWlzc2lvbnNcIjpbXCJ4Y190ZWFjaG1hbmFnZXJcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfYWRkXCIsXCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX2RlbFwiLFwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9tYXJrZXRcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfYmFzZVwiLFwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9wbGFuXCIsXCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX3B1Ymxpc2hcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfbGlzdFwiLFwiY291cnNlX2ZpbmRfbGlzdFwiXSxcInNleFwiOlwiMVwiLFwic3RhdHVzXCI6XCIxXCIsXCJ1c2VybmFtZVwiOlwiaXRjYXN0XCIsXCJ1dHlwZVwiOlwiMTAxMDAyXCJ9Iiwic2NvcGUiOlsiYWxsIl0sImV4cCI6MTY3NTM1OTc3NSwiYXV0aG9yaXRpZXMiOlsieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9iYXNlIiwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9kZWwiLCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX2xpc3QiLCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX3BsYW4iLCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlIiwiY291cnNlX2ZpbmRfbGlzdCIsInhjX3RlYWNobWFuYWdlciIsInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfbWFya2V0IiwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9wdWJsaXNoIiwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9hZGQiXSwianRpIjoiMTQxOTc1YTQtNDVhYi00Yzc3LTgwOTMtYmM4YTQ0ZmZlNTdhIiwiY2xpZW50X2lkIjoiWGNXZWJBcHAifQ.H4zCq_ZzCeF-hPrUwtnbgiL7zwdLt2SyTi2KgasczhQ
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-02T235330.200.json
+
+###
+
+POST http://localhost:63020/learning/choosecourse/125
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ7XCJjZWxscGhvbmVcIjpcIjEyMzQ1XCIsXCJjcmVhdGVUaW1lXCI6XCIyMDIyLTA5LTI4VDA4OjMyOjAzXCIsXCJlbWFpbFwiOlwiXCIsXCJpZFwiOlwiNDlcIixcIm5hbWVcIjpcInRlc3QwMlwiLFwicGVybWlzc2lvbnNcIjpbXCJ4Y190ZWFjaG1hbmFnZXJcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfYWRkXCIsXCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX2RlbFwiLFwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9tYXJrZXRcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfYmFzZVwiLFwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9wbGFuXCIsXCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX3B1Ymxpc2hcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfbGlzdFwiLFwiY291cnNlX2ZpbmRfbGlzdFwiXSxcInNleFwiOlwiMVwiLFwic3RhdHVzXCI6XCIxXCIsXCJ1c2VybmFtZVwiOlwiaXRjYXN0XCIsXCJ1dHlwZVwiOlwiMTAxMDAyXCJ9Iiwic2NvcGUiOlsiYWxsIl0sImV4cCI6MTY3NTM1OTc3NSwiYXV0aG9yaXRpZXMiOlsieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9iYXNlIiwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9kZWwiLCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX2xpc3QiLCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX3BsYW4iLCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlIiwiY291cnNlX2ZpbmRfbGlzdCIsInhjX3RlYWNobWFuYWdlciIsInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfbWFya2V0IiwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9wdWJsaXNoIiwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9hZGQiXSwianRpIjoiMTQxOTc1YTQtNDVhYi00Yzc3LTgwOTMtYmM4YTQ0ZmZlNTdhIiwiY2xpZW50X2lkIjoiWGNXZWJBcHAifQ.H4zCq_ZzCeF-hPrUwtnbgiL7zwdLt2SyTi2KgasczhQ
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-02T235220.200.json
+
+###
+
+POST http://localhost:63070/auth/oauth/check_token?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ7XCJjZWxscGhvbmVcIjpcIjEyMzQ1XCIsXCJjcmVhdGVUaW1lXCI6XCIyMDIyLTA5LTI4VDA4OjMyOjAzXCIsXCJlbWFpbFwiOlwiXCIsXCJpZFwiOlwiNDlcIixcIm5hbWVcIjpcInRlc3QwMlwiLFwicGVybWlzc2lvbnNcIjpbXCJ4Y190ZWFjaG1hbmFnZXJcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfYWRkXCIsXCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX2RlbFwiLFwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9tYXJrZXRcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfYmFzZVwiLFwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9wbGFuXCIsXCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX3B1Ymxpc2hcIixcInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfbGlzdFwiLFwiY291cnNlX2ZpbmRfbGlzdFwiXSxcInNleFwiOlwiMVwiLFwic3RhdHVzXCI6XCIxXCIsXCJ1c2VybmFtZVwiOlwiaXRjYXN0XCIsXCJ1dHlwZVwiOlwiMTAxMDAyXCJ9Iiwic2NvcGUiOlsiYWxsIl0sImV4cCI6MTY3NTM1OTc3NSwiYXV0aG9yaXRpZXMiOlsieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9iYXNlIiwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9kZWwiLCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX2xpc3QiLCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlX3BsYW4iLCJ4Y190ZWFjaG1hbmFnZXJfY291cnNlIiwiY291cnNlX2ZpbmRfbGlzdCIsInhjX3RlYWNobWFuYWdlciIsInhjX3RlYWNobWFuYWdlcl9jb3Vyc2VfbWFya2V0IiwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9wdWJsaXNoIiwieGNfdGVhY2htYW5hZ2VyX2NvdXJzZV9hZGQiXSwianRpIjoiMTQxOTc1YTQtNDVhYi00Yzc3LTgwOTMtYmM4YTQ0ZmZlNTdhIiwiY2xpZW50X2lkIjoiWGNXZWJBcHAifQ.H4zCq_ZzCeF-hPrUwtnbgiL7zwdLt2SyTi2KgasczhQ
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-02T234317.200.json
+
+###
+
+POST http://localhost:63070/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&username={"username":"itcast","password":"123","authType":"password"}&password=123
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-02T234255.200.json
+
+###
+
+POST http://localhost:63010/content/course/list?pageNo=1&pageSize=2
+Content-Type: application/json
+Content-Length: 72
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "auditStatus": "202004",
+  "courseName": "",
+  "publishStatus": ""
+}
+
+<> 2023-02-02T212456.500.json
+
+###
+
+POST http://localhost:63010/content/course/list?pageNo=1&pageSize=2
+Content-Type: application/json
+Content-Length: 72
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "auditStatus": "202004",
+  "courseName": "",
+  "publishStatus": ""
+}
+
+<> 2023-02-02T212429.500.json
+
+###
+
+GET http://localhost:63010/content/course/2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-02T203548.200.json
+
+###
+
+POST http://localhost:63010/content/course/list
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-02T203531.500.json
+
+###
+
+POST http://localhost:63040/content/course/list
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-02T202945.500.json
+
+###
+
+GET http://localhost:63040/content/course/list
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-02T202829.200.json
+
+###
+
+GET http://localhost:63040/content/list
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-02T202820.404.json
+
+###
+
+GET http://localhost:63010/content/course/2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-02T202658.200.json
+
+###
+
+GET http://localhost:63040/content/course/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ6aGFuZ3NhbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE2NzUyMzAxNjIsImF1dGhvcml0aWVzIjpbInAxIl0sImp0aSI6ImZmYTZhZDczLTgwZTQtNDYxZS1hMWQyLTlkMTZjOWY1YzE1NCIsImNsaWVudF9pZCI6IlhjV2ViQXBwIn0.5TZ1m0zdLvqy90Nv9w-lDhCYNcGyi25Kmplc8uF2-6k
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-02T202645.401.json
+
+###
+
+GET http://localhost:63040/content/course/2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-02T202603.200.json
+
+###
+
+POST http://localhost:63070/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&username={"username":"itcast","password":"123","authType":"password"}&password=123
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-02T202442.401.json
+
+###
+
+GET http://localhost:63040/content/course/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ6aGFuZ3NhbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE2NzUyMzAxNjIsImF1dGhvcml0aWVzIjpbInAxIl0sImp0aSI6ImZmYTZhZDczLTgwZTQtNDYxZS1hMWQyLTlkMTZjOWY1YzE1NCIsImNsaWVudF9pZCI6IlhjV2ViQXBwIn0.5TZ1m0zdLvqy90Nv9w-lDhCYNcGyi25Kmplc8uF2-6k
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-02T202300.401.json
+
+###
+
+GET http://localhost:63040/content/r/coursepublish/2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-02T114250.200.json
+
+###
+
+GET http://localhost:63040/content/r/coursepublish/2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-02T114143.404.json
+
+###
+
+GET http://localhost:63040/content/r/coursepublish/2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-02T114107.404.json
+
+###
+
+POST http://localhost:63075/checkcode/verify?key=checkcode:c80470b593e14c2a8c9950b0af6a2595&code=AE4Q
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T172126.200.json
+
+###
+
+POST http://localhost:63075/checkcode/pic
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T171858.200.json
+
+###
+
+POST http://localhost:63070/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&username={"username":"itcast","password":"123","authType":"password"}&password=123
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T165707.200.json
+
+###
+
+POST http://localhost:63070/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&username={"username":"itcast","authType":"password"}&password=123
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T162229.200.json
+
+###
+
+GET http://localhost:63010/content/course/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ7XCJjZWxscGhvbmVcIjpcIjEyMzQ1XCIsXCJjcmVhdGVUaW1lXCI6XCIyMDIyLTA5LTI4VDA4OjMyOjAzXCIsXCJlbWFpbFwiOlwiXCIsXCJpZFwiOlwiNDlcIixcIm5hbWVcIjpcInRlc3QwMlwiLFwic2V4XCI6XCIxXCIsXCJzdGF0dXNcIjpcIjFcIixcInVzZXJuYW1lXCI6XCJpdGNhc3RcIixcInV0eXBlXCI6XCIxMDEwMDJcIn0iLCJzY29wZSI6WyJhbGwiXSwiZXhwIjoxNjc1MjQ1MTg1LCJhdXRob3JpdGllcyI6WyJwMSJdLCJqdGkiOiJiNTg1ZGQ5NC1jYjg1LTQ0NTQtYWM3MS1kM2NiMDUyZTYzN2QiLCJjbGllbnRfaWQiOiJYY1dlYkFwcCJ9.EB8fqw99C4G-RJKv69ZoWVuuJBh9oUozB1Bb5RLoZwA
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T160506.200.json
+
+###
+
+POST http://localhost:63070/auth/oauth/check_token?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ7XCJjZWxscGhvbmVcIjpcIjEyMzQ1XCIsXCJjcmVhdGVUaW1lXCI6XCIyMDIyLTA5LTI4VDA4OjMyOjAzXCIsXCJlbWFpbFwiOlwiXCIsXCJpZFwiOlwiNDlcIixcIm5hbWVcIjpcInRlc3QwMlwiLFwic2V4XCI6XCIxXCIsXCJzdGF0dXNcIjpcIjFcIixcInVzZXJuYW1lXCI6XCJpdGNhc3RcIixcInV0eXBlXCI6XCIxMDEwMDJcIn0iLCJzY29wZSI6WyJhbGwiXSwiZXhwIjoxNjc1MjQ1MTg1LCJhdXRob3JpdGllcyI6WyJwMSJdLCJqdGkiOiJiNTg1ZGQ5NC1jYjg1LTQ0NTQtYWM3MS1kM2NiMDUyZTYzN2QiLCJjbGllbnRfaWQiOiJYY1dlYkFwcCJ9.EB8fqw99C4G-RJKv69ZoWVuuJBh9oUozB1Bb5RLoZwA
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T155327.200.json
+
+###
+
+POST http://localhost:63070/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&username=itcast&password=123
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T155306.200.json
+
+###
+
+POST http://localhost:63070/auth/oauth/check_token?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJpdGNhc3QiLCJzY29wZSI6WyJhbGwiXSwiZXhwIjoxNjc1MjQyMjE2LCJhdXRob3JpdGllcyI6WyJ0ZXN0Il0sImp0aSI6IjNmMWNlNDYyLTdjYjAtNDJhYi05ZGMzLTlhMjQxMGRhNTdkMiIsImNsaWVudF9pZCI6IlhjV2ViQXBwIn0.JAPX9JSrum_vGCCIi1WBFwk1GH26FpG-M0X7lzazwRQ
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T155101.200.json
+
+###
+
+POST http://localhost:63070/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&username=itcast&password=123
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T150336.200.json
+
+###
+
+POST http://localhost:63070/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&username=itcast&password=$2a$10$upGbx987aLCZbcd.68ljdeYdXTym3wW794C.ot4qQLtJ5.pAvyHrm
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T150050.400.json
+
+###
+
+POST http://localhost:63070/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&username=itcast&password=123
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T145331.400.json
+
+###
+
+POST http://localhost:63070/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&username=itcast&password=123
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T145050.400.json
+
+###
+
+POST http://localhost:63070/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&username=t1&password=$2a$10$0pt7WlfTbnPDTcWtp/.2Mu5CTXvohnNQhR628qq4RoKSc0dGAdEgm
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T145011.400.json
+
+###
+
+POST http://localhost:63070/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&username=itcast&password=123
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T144843.400.json
+
+###
+
+GET http://localhost:63010/content/course/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ6aGFuZ3NhbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE2NzUyMzAxNjIsImF1dGhvcml0aWVzIjpbInAxIl0sImp0aSI6ImZmYTZhZDczLTgwZTQtNDYxZS1hMWQyLTlkMTZjOWY1YzE1NCIsImNsaWVudF9pZCI6IlhjV2ViQXBwIn0.5TZ1m0zdLvqy90Nv9w-lDhCYNcGyi25Kmplc8uF2-6k
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T143132.401.json
+
+###
+
+GET http://localhost:63010/content/course/2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T143123.200.json
+
+###
+
+GET http://localhost:63040/content/course/2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T143116.200.json
+
+###
+
+GET http://localhost:63040/content/course/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ6aGFuZ3NhbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE2NzUyMzAxNjIsImF1dGhvcml0aWVzIjpbInAxIl0sImp0aSI6ImZmYTZhZDczLTgwZTQtNDYxZS1hMWQyLTlkMTZjOWY1YzE1NCIsImNsaWVudF9pZCI6IlhjV2ViQXBwIn0.5TZ1m0zdLvqy90Nv9w-lDhCYNcGyi25Kmplc8uF2-6k
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T143107.401.json
+
+###
+
+GET http://localhost:63010/content/course/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ6aGFuZ3NhbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE2NzUyMzAxNjIsImF1dGhvcml0aWVzIjpbInAxIl0sImp0aSI6ImZmYTZhZDczLTgwZTQtNDYxZS1hMWQyLTlkMTZjOWY1YzE1NCIsImNsaWVudF9pZCI6IlhjV2ViQXBwIn0.5TZ1m0zdLvqy90Nv9w-lDhCYNcGyi25Kmplc8uF2-6k
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T143007.503.json
+
+###
+
+GET http://localhost:63010/content/course/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ6aGFuZ3NhbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE2NzUyMzAxNjIsImF1dGhvcml0aWVzIjpbInAxIl0sImp0aSI6ImZmYTZhZDczLTgwZTQtNDYxZS1hMWQyLTlkMTZjOWY1YzE1NCIsImNsaWVudF9pZCI6IlhjV2ViQXBwIn0.5TZ1m0zdLvqy90Nv9w-lDhCYNcGyi25Kmplc8uF2-6k
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T142717.401.json
+
+###
+
+GET http://localhost:63010/content/course/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ6aGFuZ3NhbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE2NzUyMzAxNjIsImF1dGhvcml0aWVzIjpbInAxIl0sImp0aSI6ImZmYTZhZDczLTgwZTQtNDYxZS1hMWQyLTlkMTZjOWY1YzE1NCIsImNsaWVudF9pZCI6IlhjV2ViQXBwIn0.5TZ1m0zdLvqy90Nv9w-lDhCYNcGyi25Kmplc8uF2-6k
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T142644.401.json
+
+###
+
+GET http://localhost:63010/content/course/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ6aGFuZ3NhbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE2NzUyMzAxNjIsImF1dGhvcml0aWVzIjpbInAxIl0sImp0aSI6ImZmYTZhZDczLTgwZTQtNDYxZS1hMWQyLTlkMTZjOWY1YzE1NCIsImNsaWVudF9pZCI6IlhjV2ViQXBwIn0.5TZ1m0zdLvqy90Nv9w-lDhCYNcGyi25Kmplc8uF2-6k
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T142329.401.json
+
+###
+
+GET http://localhost:63010/content/course/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ6aGFuZ3NhbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE2NzUyMzAxNjIsImF1dGhvcml0aWVzIjpbInAxIl0sImp0aSI6ImZmYTZhZDczLTgwZTQtNDYxZS1hMWQyLTlkMTZjOWY1YzE1NCIsImNsaWVudF9pZCI6IlhjV2ViQXBwIn0.5TZ1m0zdLvqy90Nv9w-lDhCYNcGyi25Kmplc8uF2-6k
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T142148.401.json
+
+###
+
+GET http://localhost:63010/content/course/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ6aGFuZ3NhbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE2NzUyMzAxNjIsImF1dGhvcml0aWVzIjpbInAxIl0sImp0aSI6ImZmYTZhZDczLTgwZTQtNDYxZS1hMWQyLTlkMTZjOWY1YzE1NCIsImNsaWVudF9pZCI6IlhjV2ViQXBwIn0.5TZ1m0zdLvqy90Nv9w-lDhCYNcGyi25Kmplc8uF2-6k
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T141926.401.json
+
+###
+
+GET http://localhost:63010/content/course/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ6aGFuZ3NhbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE2NzUyMzAxNjIsImF1dGhvcml0aWVzIjpbInAxIl0sImp0aSI6ImZmYTZhZDczLTgwZTQtNDYxZS1hMWQyLTlkMTZjOWY1YzE1NCIsImNsaWVudF9pZCI6IlhjV2ViQXBwIn0.5TZ1m0zdLvqy90Nv9w-lDhCYNcGyi25Kmplc8uF2-6k
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T141540.401.json
+
+###
+
+GET http://localhost:63040/content/course/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ6aGFuZ3NhbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE2NzUyMzAxNjIsImF1dGhvcml0aWVzIjpbInAxIl0sImp0aSI6ImZmYTZhZDczLTgwZTQtNDYxZS1hMWQyLTlkMTZjOWY1YzE1NCIsImNsaWVudF9pZCI6IlhjV2ViQXBwIn0.5TZ1m0zdLvqy90Nv9w-lDhCYNcGyi25Kmplc8uF2-6k
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T120421.200.json
+
+###
+
+GET http://localhost:63040/content/course/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ6aGFuZ3NhbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE2NzUyMzAxNjIsImF1dGhvcml0aWVzIjpbInAxIl0sImp0aSI6ImZmYTZhZDczLTgwZTQtNDYxZS1hMWQyLTlkMTZjOWY1YzE1NCIsImNsaWVudF9pZCI6IlhjV2ViQXBwIn0.5TZ1m0zdLvqy90Nv9w-lDhCYNcGyi25Kmplc8uF2-6k
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T120355.200.json
+
+###
+
+GET http://localhost:63040/content/course/2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T120302.401.json
+
+###
+
+GET http://localhost:63040/content/course/2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-01T120226.401.json
+
+###
+

@@ -1,0 +1,25 @@
+{
+  "aud": [
+    "xuecheng-plus"
+  ],
+  "user_name": "{\"cellphone\":\"12345\",\"createTime\":\"2022-09-28T08:32:03\",\"email\":\"\",\"id\":\"49\",\"name\":\"test02\",\"permissions\":[\"xc_teachmanager\",\"xc_teachmanager_course\",\"xc_teachmanager_course_add\",\"xc_teachmanager_course_del\",\"xc_teachmanager_course_market\",\"xc_teachmanager_course_base\",\"xc_teachmanager_course_plan\",\"xc_teachmanager_course_publish\",\"xc_teachmanager_course_list\",\"course_find_list\"],\"sex\":\"1\",\"status\":\"1\",\"username\":\"itcast\",\"utype\":\"101002\"}",
+  "scope": [
+    "all"
+  ],
+  "active": true,
+  "exp": 1675359775,
+  "authorities": [
+    "xc_teachmanager_course_base",
+    "xc_teachmanager_course_del",
+    "xc_teachmanager_course_list",
+    "xc_teachmanager_course_plan",
+    "xc_teachmanager_course",
+    "course_find_list",
+    "xc_teachmanager",
+    "xc_teachmanager_course_market",
+    "xc_teachmanager_course_publish",
+    "xc_teachmanager_course_add"
+  ],
+  "jti": "141975a4-45ab-4c77-8093-bc8a44ffe57a",
+  "client_id": "XcWebApp"
+}

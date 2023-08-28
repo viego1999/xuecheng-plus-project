@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "id": 102,
+      "companyId": null,
+      "companyName": null,
+      "name": "Spring 编程思想",
+      "users": null,
+      "tags": null,
+      "mt": "1-3",
+      "mtName": null,
+      "st": "1-3-2",
+      "stName": null,
+      "grade": "204001",
+      "teachmode": "200002",
+      "pic": "/mediafiles/2022/09/20/1d0f0e6ed8a0c4a89bfd304b84599d9c.png",
+      "description": null,
+      "createDate": "2022-09-25 09:36:11",
+      "status": null,
+      "remark": null,
+      "charge": "201000",
+      "price": 100.0,
+      "originalPrice": 200.0,
+      "validDays": 222
+    }
+  ],
+  "counts": 1,
+  "page": 1,
+  "pageSize": 10,
+  "mtList": [
+    "编程开发"
+  ],
+  "stList": [
+    "Java 语言"
+  ]
+}

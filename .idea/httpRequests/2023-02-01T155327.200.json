@@ -1,0 +1,16 @@
+{
+  "aud": [
+    "xuecheng-plus"
+  ],
+  "user_name": "{\"cellphone\":\"12345\",\"createTime\":\"2022-09-28T08:32:03\",\"email\":\"\",\"id\":\"49\",\"name\":\"test02\",\"sex\":\"1\",\"status\":\"1\",\"username\":\"itcast\",\"utype\":\"101002\"}",
+  "scope": [
+    "all"
+  ],
+  "active": true,
+  "exp": 1675245185,
+  "authorities": [
+    "p1"
+  ],
+  "jti": "b585dd94-cb85-4454-ac71-d3cb052e637d",
+  "client_id": "XcWebApp"
+}

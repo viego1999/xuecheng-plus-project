@@ -1,0 +1,44 @@
+# 微服务配置
+spring:
+  application:
+    name: content-api
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      discovery:
+        namespace: ${spring.profiles.active}  # 命名空间id
+        group: xuecheng-plus-project
+      config:
+        # 方式一：通过 dataid 方式引入
+        namespace: ${spring.profiles.active}
+        group: xuecheng-plus-project
+        file-extension: yaml
+        refresh-enabled: true
+        # 方式二：以扩展配置文件方式引入
+        extension-configs:
+          - data-id: content-service-${spring.profiles.active}.yaml
+            group: xuecheng-plus-project
+            refresh: true
+          - data-id: search-${spring.profiles.active}.yaml  # 由于 configuration 需要加载 search 项目的配置文件信息
+            group: xuecheng-plus-project
+            refresh: true
+        # 方式三：以共享配置文件 方式引入
+        shared-configs:
+          - data-id: swagger-${spring.profiles.active}.yaml
+            group: xuecheng-plus-common
+            refresh: true
+          - data-id: logging-${spring.profiles.active}.yaml
+            group: xuecheng-plus-common
+            refresh: true
+          - data-id: freemarker-config-${spring.profiles.active}.yaml
+            group: xuecheng-plus-common
+            refresh: true
+          - data-id: feign-${spring.profiles.active}.yaml
+            group: xuecheng-plus-common
+            refresh: true
+          - data-id: redis-${spring.profiles.active}.yaml
+            group: xuecheng-plus-common
+            refresh: true
+  # 方式四：本地配置文件
+  profiles:
+    active: dev

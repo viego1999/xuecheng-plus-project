@@ -1,0 +1,12 @@
+com\xuecheng\base\exception\XueChengPlusException.class
+com\xuecheng\base\model\RestResponse.class
+com\xuecheng\base\exception\ValidationGroups$Delete.class
+com\xuecheng\base\exception\ValidationGroups$Update.class
+com\xuecheng\base\exception\RestErrorResponse.class
+com\xuecheng\base\model\PageParams.class
+com\xuecheng\base\config\LocalDateTimeConfig.class
+com\xuecheng\base\exception\CommonError.class
+com\xuecheng\base\exception\GlobalExceptionHandler.class
+com\xuecheng\base\exception\ValidationGroups$Insert.class
+com\xuecheng\base\exception\ValidationGroups.class
+com\xuecheng\base\model\PageResult.class

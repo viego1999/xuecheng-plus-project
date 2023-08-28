@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/xuecheng-plus-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-base/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-content/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-pus-content-model/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-service/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-content/xuecheng-plus-content-api/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-generator/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-system/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-media/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-message-sdk/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-search/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-auth/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-checkcode/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-learning/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-orders/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-orders/xuecheng-plus-orders-api/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-orders/xuecheng-plus-orders-model/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
